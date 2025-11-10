@@ -1,0 +1,12 @@
+langchain
+langchain-core
+
+langchain-groq
+
+python-dotenv
+
+pdfminer.six
+
+fastapi
+uvicorn
+python-multipart
