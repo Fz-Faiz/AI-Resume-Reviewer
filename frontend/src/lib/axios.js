@@ -1,8 +1,8 @@
-import axios from 'axios'
+import axios from "axios";
 
 const axiosInstance = axios.create({
-    baseURL: import.meta.mode === "developement" ? "http://localhost:5000/api" : "/api",
+    baseURL: "http://localhost:5000/api",
     withCredentials: true
-})
+});
 
-export default axiosInstance
+export default axiosInstance;

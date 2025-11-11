@@ -11,8 +11,8 @@ export default function HeroSection() {
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
                 Land your dream job
-                <span className="block bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent pb-2 leading-[1.1]">
-                    with AI-powered resume edge
+                <span  className="block bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent pb-2 leading-[1.1]">
+                    with AI-powered Resume Edge
                 </span>
             </h1>
 
