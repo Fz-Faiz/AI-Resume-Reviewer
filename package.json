@@ -14,6 +14,7 @@
     "nodemon": "^3.1.10"
   },
   "dependencies": {
+    "@pdf-lib/fontkit": "^1.1.1",
     "axios": "^1.13.2",
     "bcryptjs": "^3.0.2",
     "cookie-parser": "^1.4.7",
@@ -24,6 +25,9 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.19.2",
     "multer": "^2.0.2",
-    "pdf-parse": "^2.4.5"
+    "pdf-extract-text": "^0.1.3",
+    "pdf-lib": "^1.17.1",
+    "pdf-parse": "^2.4.5",
+    "pdf2json": "^4.0.0"
   }
 }

@@ -35,7 +35,7 @@ function App() {
                 <Route path="/login" element={!user ? <LoginPage onBack={() => navigate('/')} /> : <Navigate to="/dashboard" />} />
 
                 <Route path="/analyze-resume" element={<AnalyzeResumePage onBack={() => navigate('/dashboard')}/>} />
-                <Route path="/edit-resume" element={<EditResumePage/>} />
+                <Route path="/edit-resume" element={<EditResumePage onBack={() => navigate('/dashboard')}/>} />
 
             </Routes>
             <Toaster/>

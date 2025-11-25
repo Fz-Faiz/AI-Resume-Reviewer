@@ -4,12 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import { useResumeStore } from '../store/useResumeStore.js'
 
 export default function DashboardPage({ onLogout }) {
-  const [analyzeFile, setAnalyzeFile] = useState(null);
-  const [editFile, setEditFile] = useState(null);
   const analyzeInputRef = useRef(null);
   const editInputRef = useRef(null);
   const navigate = useNavigate()
-  const { analyzeResume, setFilename } = useResumeStore();
+  const { analyzeResume, setFilename, editResume, uploadResume } = useResumeStore();
   
 
   const handleFileSelect = (e, type) => {
@@ -17,11 +15,13 @@ export default function DashboardPage({ onLogout }) {
     if (file && file.type === 'application/pdf') {
       if (type === 'analyze') {
         setFilename(file.name)
-        setAnalyzeFile(file);
         analyzeResume(file)
         navigate("/analyze-resume")
       } else {
-        setEditFile(file);
+        setFilename(file.name)
+        editResume(file)
+        uploadResume(file)
+        navigate("/edit-resume")
       }
     } else {
       alert('Please select a PDF file');
@@ -78,11 +78,6 @@ export default function DashboardPage({ onLogout }) {
               <h3 className="text-3xl font-bold text-gray-900 mb-3">Analyze Resume</h3>
               <p className="text-gray-600 mb-6">Upload your resume to get AI-powered insights and feedback</p>
 
-          
-              <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg font-semibold group-hover:shadow-lg transition-all duration-200 transform group-hover:scale-105">
-                <Upload size={20} />
-                {analyzeFile ? 'Change File' : 'Upload PDF'}
-              </div>
             </div>
 
             <input
@@ -111,19 +106,6 @@ export default function DashboardPage({ onLogout }) {
               <h3 className="text-3xl font-bold text-gray-900 mb-3">Edit Resume</h3>
               <p className="text-gray-600 mb-6">Upload and edit your resume with our intuitive editor</p>
 
-              {editFile && (
-                <div className="mb-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
-                  <p className="text-sm font-medium text-blue-900 flex items-center gap-2">
-                    <FileText size={16} />
-                    {editFile.name}
-                  </p>
-                </div>
-              )}
-
-              <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg font-semibold group-hover:shadow-lg transition-all duration-200 transform group-hover:scale-105">
-                <Upload size={20} />
-                {editFile ? 'Change File' : 'Upload PDF'}
-              </div>
             </div>
 
             <input
