@@ -75,7 +75,7 @@ export const chatResume = async (req, res) => {
     const response = await axiosInstanceFastApi.post("/chat", { question });
 
     return res.status(200).json({
-      answer: response.data.answer,  // <--- FIX
+      answer: response.data.answer,  
     });
 
   } catch (error) {
