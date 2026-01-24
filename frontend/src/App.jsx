@@ -2,7 +2,7 @@ import Navbar from "./components/NavBar.jsx"
 import DashboardPage from "./pages/DashboardPage.jsx"
 import HomePage from "./pages/HomePage.jsx"
 import { Navigate, Route, Routes, useLocation } from "react-router-dom"
-import SignupPage from "./pages/SignUpPage.jsx"
+import SignupPage from "./pages/SignupPage.jsx"
 import LoginPage from './pages/LoginPage.jsx'
 import { useNavigate } from "react-router-dom"
 import { useUserStore } from "./store/useUserStore.js"
