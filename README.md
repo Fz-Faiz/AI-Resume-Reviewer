@@ -6,6 +6,15 @@ Built with **MERN Stack + LangChain**, designed for scalability and real-world u
 
 ---
 
+## 🌐 Live Application
+
+🚀 **Access the live app here:**  
+👉 **[Live Demo](https://ai-resume-reviewer-0z2f.onrender.com)**
+
+> ⚠️ If the app feels slow on first load, the backend may be sleeping.
+
+---
+
 ## ⚠️ Important: Wake Up the Server First
 
 > 🚨 The backend runs on a free hosting service and may go to sleep due to inactivity.
