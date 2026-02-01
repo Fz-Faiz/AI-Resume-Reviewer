@@ -11,7 +11,7 @@ Built with **MERN Stack + LangChain**, designed for scalability and real-world u
 > 🚨 The backend runs on a free hosting service and may go to sleep due to inactivity.
 
 🔗 **Click this link before using the app:**  
-👉 **[Wake Up Server](https://ai-resume-reviewer-0z2f.onrender.com)**
+👉 **[Wake Up Server](https://ai-resume-reviewer-6ghu.onrender.com)**
 
 ⏳ Wait **30–60 seconds** after opening the link, then start using the application.
 
